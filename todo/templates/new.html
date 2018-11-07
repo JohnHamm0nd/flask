@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block bb %}
+<h1>New</h1>
+    <form action="/todos/create" method="post">
+      <div class="form-group">
+        <label for="todo">할 일</label>
+        <input name="todo" type="text" class="form-control" id="todo" placeholder="할 일을 입력해주세요">
+      </div>
+        <div>
+        <label for="deadline">날 짜</label>
+        <input name="deadline" type="date" id="deadline" class="form-control">
+        </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock %}

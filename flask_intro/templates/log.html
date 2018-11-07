@@ -1,0 +1,23 @@
+{% extends "base.html" %}   
+{% block body_block %}
+    <h1>검색 로그입니다.</h1>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">소환사 이름</th>
+          <th scope="col">전적</th>
+          <th scope="col">검색시간</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in logs %}
+        <tr>
+          <td>{{log[0]}}</td>
+          <td>{{log[1]}}</td>
+          <td>{{log[2]}}</td>
+        </tr>
+        {% endfor %}
+        <!-- for 문 안에 넣은 변수는 재사용이 안되는듯 -->
+      </tbody>
+    </table>
+{% endblock %}
